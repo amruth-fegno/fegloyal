@@ -7,6 +7,7 @@ import TiersSection from './components/TiersSection';
 import GoalJourneys from './components/GoalJourneys';
 import GiftCatalog from './components/GiftCatalog';
 import Transactions from './components/Transactions';
+import ProtectedArea from './components/ProtectedArea';
 import DeleteAccount from './components/DeleteAccount';
 import Footer from './components/Footer';
 import { Smartphone, QrCode, Sparkles, Star, ChevronDown, Award } from 'lucide-react';
@@ -131,6 +132,9 @@ export default function App() {
                   </div>
                 </div>
               </section>
+
+              {/* Protected compliance entry point for sensitive actions */}
+              <ProtectedArea onPageChange={handlePageChange} />
             </motion.div>
           ) : (
             <motion.div

@@ -64,6 +64,14 @@ export default function Footer({ onPageChange }: FooterProps) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleSectionNav = (sectionId: string) => {
+    onPageChange('home');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.setTimeout(() => {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 120);
+  };
+
   return (
     <footer id="footer-section" className="bg-[#0F172A] border-t border-white/5 pt-16 pb-12 relative overflow-hidden">
       {/* Background decorations */}
@@ -140,10 +148,10 @@ export default function Footer({ onPageChange }: FooterProps) {
             <ul className="space-y-2 text-xs">
               <li>
                 <button
-                  onClick={() => handleNavClick('delete-account')}
+                  onClick={() => handleSectionNav('protected-area')}
                   className="text-red-400/80 hover:text-red-400 font-medium transition-colors flex items-center gap-1 cursor-pointer"
                 >
-                  <ShieldAlert className="h-3 w-3" /> Delete Account Portal
+                  <ShieldAlert className="h-3 w-3" /> Protected Account Area
                 </button>
               </li>
               <li>
