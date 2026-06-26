@@ -1,0 +1,6 @@
+{
+  "name": "Fegno Loyalty Companion",
+  "description": "Premium companion landing page and compliant account deletion portal for the Fegno Loyalty mobile application.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
